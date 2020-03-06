@@ -1,3 +1,4 @@
+npm run build
 git checkout gh-pages
 cp dist/* .
 git add *
