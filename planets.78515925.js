@@ -339,4 +339,4 @@ var t=arguments[3];Object.defineProperty(exports,"__esModule",{value:!0}),export
 },{"react":"HdMw","./Info":"xSON"}],"Focm":[function(require,module,exports) {
 "use strict";require("panic-overlay");var e=u(require("react")),r=u(require("react-dom"));require("./reset.css"),require("./index.css");var t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(t.default,null),document.getElementById("root"));
 },{"panic-overlay":"WbPN","react":"HdMw","react-dom":"X9zx","./reset.css":"AQoi","./index.css":"AQoi","./App":"lY9v"}]},{},["Focm"], null)
-//# sourceMappingURL=planets/planets.78515925.js.map
+//# sourceMappingURL=planets.78515925.js.map
