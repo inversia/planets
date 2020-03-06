@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "start": "rm -rf dist .cache && parcel index.html",
-    "build": "rm -rf dist .cache && parcel build index.html",
+    "build": "rm -rf dist .cache && parcel build --public-url ./planets/ index.html",
     "publish": "npm run build && ./gh-pages-publish.sh"
   },
   "keywords": [],
