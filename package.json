@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf .dist cache && parcel index.html"
+    "start": "rm -rf dist .cache && parcel index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "panic-overlay": "^1.0.41",
-    "parcel": "^2.0.0-alpha.3.2",
+    "parcel": "^1.12.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-use": "^13.27.0"
