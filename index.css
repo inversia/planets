@@ -28,7 +28,7 @@ h1 {
 
 input[type=text] {
     width: 60vw;
-    padding: 2vw 1vw;
+    padding: 2vw;
     margin: 0vw auto;
     outline: none;
     font-size: 2vw;
