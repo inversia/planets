@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist .cache && parcel build index.html",
-    "start": "rm -rf dist .cache && parcel index.html"
+    "drop-parcel-cache": "rm -rf dist .cache",
+    "build": "npm run drop-parcel-cache && parcel build index.html && ./gh-pages-publish.sh",
+    "start": "npm run drop-parcel-cache && parcel index.html"
   },
   "keywords": [],
   "author": "",
