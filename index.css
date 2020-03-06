@@ -1,13 +1,9 @@
-@keyframes pulse {
-    0%   {opacity: 0.3; background-color:rgb(149, 160, 255);}
-    25%   {              background-color:rgb(62, 255, 197);}
-    50%   {opacity: 1;  background-color:rgb(179, 255, 0);}
-    75%   {              background-color:rgb(62, 255, 197);}
-    100% {opacity: 0.3; background-color: rgb(0, 255, 157);}
-}
-
 body {
     background: radial-gradient(#2e2b2b, #000000);
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -18,7 +14,8 @@ body {
 }
 
 ::selection {
-    color:rgb(217, 255, 0);
+    color:rgb(255, 255, 255);
+    background-color: turquoise;
 }
 
 h1 {
@@ -152,11 +149,32 @@ input[type=text] {
     color: rgb(69, 228, 207);
 }
 
-.info-wrapper button {
+.info-wrapper button.close {
     position: absolute;
     top:0;
     left:0;
+    background-color: rgb(5, 168, 155);
+    border:none;
+    border-radius: 0vw 0vw 2vw 0vw;
+    outline: none;
+    height: 5vh;
+    width:5vh;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+    transform-origin: left top;
 }
+
+
+    .info-wrapper button:hover {
+        transform: scale(1.25);
+    }
+
+    .info-wrapper button:after {
+        content: '✚';
+        color: white;
+        display: block;
+        transform: rotate(45deg);
+    }
 
 .circular-loader {
     display: block;
