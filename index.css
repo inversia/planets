@@ -1,3 +1,11 @@
+@keyframes pulse {
+    0%   {opacity: 0.3; background-color:rgb(149, 160, 255);}
+    25%   {              background-color:rgb(62, 255, 197);}
+    50%   {opacity: 1;  background-color:rgb(179, 255, 0);}
+    75%   {              background-color:rgb(62, 255, 197);}
+    100% {opacity: 0.3; background-color: rgb(0, 255, 157);}
+}
+
 body {
     background: radial-gradient(#2e2b2b, #000000);
 }
@@ -15,31 +23,32 @@ body {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-size: 4vw;
-    margin-bottom: 3vw;
-    /* border-bottom: 0.04em solid aquamarine; */
-}
+    font-size: 3vw;
+    position: relative;
+    z-index: 1;
 
-form {
-    display: flex;
 }
 
 input[type=text] {
-    /* width: 80%; */
-    width: 50vw;
-    padding: 1vw 1vw;
-    margin: 3vw auto;
+    width: 60vw;
+    padding: 2vw 1vw;
+    margin: 0vw auto;
     outline: none;
     font-size: 2vw;
     border-radius: 1vw;
     border:none;
     color: rgb(11, 100, 85);
+    margin-top:8vw;
+    position: relative;
+    z-index: 1;
 }
+
 
 .table ul {
     box-sizing:border-box;
+    position: relative;
     width: 50vw;
-    height: 10vw;
+    height: 15vw;
     font-size: 1.5vw;
     border:0.1em solid rgb(255, 255, 255);
     display: flex;
@@ -49,7 +58,9 @@ input[type=text] {
     padding: 1vw 2vw;
     overflow: scroll;
     cursor: pointer;
-    margin-bottom: 3vw;
+    margin: 8vw 0vw ;
+    box-shadow: rgba(0, 255, 200, 0.8) 0vw 0vw 20vw 0.1vw;
+    
 }
 
 .table li {
@@ -64,23 +75,52 @@ input[type=text] {
     transform: scale(1.2);
 }
 
-span {
-    color:rgb(76, 238, 216);
-}
+    .table ul .loading {
+        position: absolute;
+        width:100%;
+        height: 100%;
+        /* background-color: rgb(0, 0, 0); */
+        margin: -1vw -2vw;
+        /* animation: pulse 0.9s ease-in-out alternate infinite; */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table ul .loading .circular-loader {
+        width: 10vw;
+        height: 10vw;
+    }
+
 
 .info-wrapper {
     position: fixed;
+    z-index: 2;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    background-color: black;
-    padding: 15vw;
+    /* background-color: black; */
+    background: radial-gradient(#2e2b2b, #000000);
+    padding: 0vw 15vw;
+}
+
+.info-wrapper h1 {
+    padding: 7vw 0vw;
+    font-size: 4vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-wrapper span {
+    color:rgb(76, 238, 216);
+    padding-left: 0.3em;
 }
   
 .info-wrapper ul {
     box-shadow: rgba(0, 255, 200, 0.8) 0vw 0vw 20vw 0.1vw;
-    border: rgb(68, 255, 224, 0.8) solid 1px;
+    border:1px solid rgb(255, 255, 255);
     border-radius: 3vw;
     display: flex;
     flex-direction: column;
@@ -110,4 +150,45 @@ span {
     font-size: 2vw;
     flex: 1;
     color: rgb(69, 228, 207);
+}
+
+.info-wrapper button {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.circular-loader {
+    display: block;
+    animation: circular-loader-rotation 2s linear infinite;
+}
+
+.circular-loader circle {
+    animation: circular-loader-dash-movement 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+    fill: none;
+    stroke: rgba(16, 129, 101, 0.596);
+    stroke-width: 4;
+}
+
+@keyframes circular-loader-rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circular-loader-dash-movement {
+
+    0% {
+        stroke-dasharray: 1,200; /* dash length + white space */
+        stroke-dashoffset: 0; /* dash start */
+    }
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
 }
