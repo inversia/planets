@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "private": true,
+  "browserslist": [
+    "since 2017-06"
+  ],
   "scripts": {
-    "publish": "rm -rf dist .cache && parcel build index.html && ./gh-pages-publish.sh",
-    "start": "rm -rf dist .cache && parcel index.html"
+    "start": "rm -rf dist .cache && parcel index.html",
+    "build": "rm -rf dist .cache && parcel build index.html",
+    "publish": "npm run build && ./gh-pages-publish.sh"
   },
   "keywords": [],
   "author": "",
