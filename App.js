@@ -24,7 +24,8 @@ export default function App () {
     }, [])
 
     function planetFilter (p) {
-        return !searchString || p.name.toLowerCase().includes (searchString) || p.terrain.toLowerCase().includes(searchString)
+        const str = searchString.toLowerCase()
+        return !str || p.name.toLowerCase().includes (str) || p.terrain.toLowerCase().includes(str)
     }
 
     return <div className='container'>

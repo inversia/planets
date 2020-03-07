@@ -1,8 +1,9 @@
 body {
     background: radial-gradient(#2e2b2b, #000000);
+    background-repeat: no-repeat;
 }
 
-* {
+body * {
     font-family: 'Ubuntu', sans-serif;
 }
 
