@@ -53,12 +53,18 @@ input[type=text] {
     flex-direction: column;
     border-radius: 2vw;
     align-items: flex-start;
-    padding: 1vw 2vw;
+    padding: 1.5vw;
     overflow: scroll;
     cursor: pointer;
     margin: 8vw 0vw ;
     box-shadow: rgba(0, 255, 200, 0.8) 0vw 0vw 20vw 0.1vw;
-    
+}
+
+.table ul:empty::before {
+    content: 'Nothing found :(';
+    padding: 0.5em;
+    color: white;
+    opacity: 0.35;
 }
 
 .table li {
