@@ -1,6 +1,16 @@
+html {
+    background-color: black;
+    height: 100%;
+}
+
 body {
-    background: radial-gradient(#2e2b2b, #000000);
+    background-image: radial-gradient(#2e2b2b, #000000);
     background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100%;
 }
 
 body * {
@@ -10,8 +20,10 @@ body * {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 ::selection {
@@ -24,40 +36,36 @@ h1 {
     font-size: 3vw;
     position: relative;
     z-index: 1;
-
 }
 
 input[type=text] {
-    width: 60vw;
-    padding: 2vw;
-    margin: 0vw auto;
+    width: 50vw;
+    padding: 1.5vw;
     outline: none;
-    font-size: 2vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
     border:none;
     color: rgb(11, 100, 85);
-    margin-top:8vw;
+    margin-top:5vw;
     position: relative;
     z-index: 1;
 }
-
 
 .table ul {
     box-sizing:border-box;
     position: relative;
     width: 50vw;
-    height: 15vw;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     border:0.1em solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     border-radius: 2vw;
     align-items: flex-start;
     padding: 1.5vw;
-    overflow: scroll;
     cursor: pointer;
-    margin: 8vw 0vw ;
+    margin: 5vw 0vw;
     box-shadow: rgba(0, 255, 200, 0.8) 0vw 0vw 20vw 0.1vw;
+    min-height: 15vw;
 }
 
 .table ul:empty::before {
@@ -80,17 +88,17 @@ input[type=text] {
 }
 
     .table ul .loading {
+        left: 0;
+        top: 0;
         position: absolute;
         width:100%;
         height: 100%;
-        /* background-color: rgb(0, 0, 0); */
-        margin: -1vw -2vw;
-        /* animation: pulse 0.9s ease-in-out alternate infinite; */
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
 
     .table ul .loading .circular-loader {
         width: 10vw;
@@ -100,18 +108,25 @@ input[type=text] {
 
 .info-wrapper {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 2;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    /* background-color: black; */
     background: radial-gradient(#2e2b2b, #000000);
     padding: 0vw 15vw;
 }
 
-.info-wrapper h1 {
-    padding: 7vw 0vw;
+.list-wrapper {
+    position: relative;
+}
+
+.list-wrapper h1 {
+    position: absolute;
+    top:-7vw;
     font-size: 4vw;
     display: flex;
     align-items: flex-start;
@@ -215,5 +230,135 @@ input[type=text] {
     100% {
         stroke-dasharray: 89,200;
         stroke-dashoffset: -124;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    input[type=text] {
+        padding: 1.7vw; 
+        font-size: 1.7vw;
+    }
+
+    .table ul {
+        font-size: 1.7vw;
+    }
+}
+
+@media (max-width: 1140px) {
+    
+    .container {
+        margin-top: 4vw;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    input[type=text] {
+        width: 55vw;
+        padding: 1.7vw; 
+        font-size: 1.7vw;
+    }
+
+    .table ul {
+        width: 55vw; 
+        font-size: 1.7vw;
+    }
+
+}
+
+@media (max-width: 950px) {
+    
+    .container {
+        margin-top: 1vw;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    input[type=text] {
+        width: 70vw;
+        padding: 2vw; 
+        font-size: 2.5vw;
+    }
+
+    .table ul {
+        width: 70vw; 
+        font-size: 2.5vw;
+    }
+
+    .list-wrapper h1 {
+        top:-8vw;
+        font-size: 5vw;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .container {
+        margin-top: 5vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    input[type=text] {
+        width: 70vw;
+        padding: 2vw; 
+        font-size: 2.5vw;
+    }
+
+    .table ul {
+        width: 70vw; 
+        font-size: 2.5vw;
+    }
+
+    .table li {
+        padding: 0.8em;
+    }
+
+    .list-wrapper h1 {
+        top:-10vw;
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .container {
+        margin-top: 15vw;
+    }
+
+    input[type=text] {
+        padding: 2.5vw; 
+        font-size: 2.3vw;
+    }
+
+    .table ul {
+        font-size: 2.3vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin-top: 20vw;
+    }
+
+    input[type=text] {
+        padding: 2.5vw; 
+        font-size: 3vw;
+    }
+
+    .table ul {
+        font-size: 2.6vw;
+    }
+
+    .table li {
+        padding: 0.8em;
     }
 }
