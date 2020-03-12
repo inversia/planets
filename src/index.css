@@ -246,7 +246,7 @@ input[type=text] {
 }
 
 @media (max-width: 1140px) {
-    
+
     .container {
         margin-top: 4vw;
     }
@@ -287,6 +287,7 @@ input[type=text] {
     .table ul {
         width: 70vw; 
         font-size: 2.5vw;
+        margin: 6vw auto;
     }
 
     .list-wrapper h1 {
@@ -309,12 +310,12 @@ input[type=text] {
     input[type=text] {
         width: 70vw;
         padding: 2vw; 
-        font-size: 2.5vw;
+        font-size: 2.4vw;
     }
 
     .table ul {
         width: 70vw; 
-        font-size: 2.5vw;
+        font-size: 2.4vw;
     }
 
     .table li {
@@ -330,7 +331,7 @@ input[type=text] {
 @media (max-width: 680px) {
 
     .container {
-        margin-top: 15vw;
+        margin-top: 12vw;
     }
 
     input[type=text] {
@@ -346,7 +347,7 @@ input[type=text] {
 @media (max-width: 600px) {
 
     .container {
-        margin-top: 20vw;
+        margin-top: 17vw;
     }
 
     input[type=text] {
