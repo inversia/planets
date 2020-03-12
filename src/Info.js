@@ -1,5 +1,5 @@
 import React from 'react'
-import { useKey } from 'react-use';
+import { useKey } from 'react-use'
 
 export default function Info ({ currentPlanet, setCurrentPlanet }) {
 
@@ -11,6 +11,7 @@ export default function Info ({ currentPlanet, setCurrentPlanet }) {
             <button className="close" onClick={close}></button>
             <div className="list-wrapper">
                 <h1>Planet<span>{currentPlanet.name}</span></h1>
+
                 <ul>
                 <div className="info-item-wrapper">
                     <label>Diameter:</label>
