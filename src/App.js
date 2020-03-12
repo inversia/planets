@@ -21,13 +21,12 @@ export default function App () {
         }
     }
 
-    useEffect (() => {
-        fetchPlanets ()
-    }, [])
+    useEffect (() => { fetchPlanets ()}, [])
 
     function planetFilter (planet) {
-        const str = searchString.toLowerCase ()
-        return !str || planet.name.toLowerCase ().includes (str) || planet.terrain.toLowerCase ().includes (str)
+
+        const string = searchString.toLowerCase ()
+        return !string || planet.name.toLowerCase ().includes (string) || planet.terrain.toLowerCase ().includes (string)
     }
 
     return <div className='container'>
